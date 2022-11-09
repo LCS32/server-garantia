@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const garantia_1 = require("../controllers/garantia");
+const router = (0, express_1.Router)();
+router.get('/', garantia_1.getGarantias);
+router.get('/:id', garantia_1.getGarantia);
+router.delete('/:id', garantia_1.deleteGarantia);
+router.post('/', garantia_1.postGarantia);
+router.put('/:id', garantia_1.udpateGarantia);
+exports.default = router;
